@@ -1,10 +1,10 @@
-public class drink extends meal{
+public class Drink extends Meal{
     private boolean isAlcoholic;
     private String name;
-    private int capacity;
+    private double capacity;
     private int price;
 
-    public drink(boolean isAlcoholic, int capacity, String name, int price)
+    public Drink(boolean isAlcoholic, String name, double capacity, int price)
     {
         this.isAlcoholic = isAlcoholic;
         this.capacity = capacity;
@@ -22,7 +22,7 @@ public class drink extends meal{
         return name;
     }
     
-    public int getCapacity()
+    public double getCapacity()
     {
         return capacity;
     }

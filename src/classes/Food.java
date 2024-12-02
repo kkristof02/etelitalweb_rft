@@ -1,9 +1,9 @@
-public class food extends meal{
+public class Food extends Meal{
     private String type;
     private String name;
     private int price;
 
-    public food(String type, String name, int price)
+    public Food(String type, String name, int price)
     {
         this.type = type;
         this.name = name;
