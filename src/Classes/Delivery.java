@@ -1,3 +1,6 @@
+package src.Classes;
+
+
 public class Delivery {
     private static int deliveryPrice ;
 

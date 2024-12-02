@@ -1,3 +1,6 @@
+package src.Classes;
+
+
 public class Drink extends Meal{
     private boolean isAlcoholic;
     private String name;
@@ -46,6 +49,11 @@ public class Drink extends Meal{
     public void setPrice(int price) {
         this.price = price;
     }
+
+     @Override
+     public String toString() {
+         return "Termék: " + name + " " + "Ár: " + price + " ";
+     }
 
 
 

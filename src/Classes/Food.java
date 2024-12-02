@@ -1,3 +1,6 @@
+package src.Classes;
+
+
 public class Food extends Meal{
     private String type;
     private String name;
@@ -32,6 +35,11 @@ public class Food extends Meal{
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Termék: " + name + " " + "Ár: " + price + " ";
     }
 
 }

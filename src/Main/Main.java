@@ -1,7 +1,7 @@
-
+package src.Main;
 
 import java.util.ArrayList;
-
+import src.Classes.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,16 +20,20 @@ public class Main {
         Food f5 = new Food("Főétel", "Sertéspörkölt galuskával", 3450);
         Food f6 = new Food("Főétel", "Grilezett lazac", 4760);
 
-        ArrayList<Meal> meals = new ArrayList<Meal>();
-        meals.add(f6);
-        meals.add(f5);
-        meals.add(d1);
-        meals.add(d2);
+        Basket b1 = new Basket(f6, 1);
+        Basket b2 = new Basket(f2, 1);
+        Basket b3 = new Basket(d1, 2);
 
-        Order o1 = new Order(meals, 1);
+        ArrayList<Basket> b = new ArrayList<Basket>();
+        b.add(b1);
+        b.add(b2);
+        b.add(b3);
 
-        System.out.println(meals);
-        System.out.println("ez az ára: " + o1.allOrderedProductPrice(meals));
+
+        Order o1 = new Order(b, 1);
+
+        System.out.println(b);
+        System.out.println("Összesen: " + o1.allOrderedProductPrice(b));
 
 
 
