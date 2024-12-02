@@ -13,6 +13,10 @@ public class Order {
         this.order_number = order_number;
     }
 
+    public int getOrder_number() {
+        return order_number;
+    }
+
     public int allOrderedProductPrice(ArrayList<Basket> baskets)
     {
         Delivery d = new Delivery();

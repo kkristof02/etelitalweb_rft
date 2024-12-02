@@ -35,6 +35,9 @@ public class Main {
         System.out.println(b);
         System.out.println("Összesen: " + o1.allOrderedProductPrice(b));
 
+        Rating r1 = new Rating(o1, "Leves", "Finom volt");
+        System.out.println(r1);
+
 
 
 
