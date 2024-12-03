@@ -20,23 +20,22 @@ public class Main {
         Food f5 = new Food("Főétel", "Sertéspörkölt galuskával", 3450);
         Food f6 = new Food("Főétel", "Grilezett lazac", 4760);
 
-        Basket b1 = new Basket(f6, 1);
-        Basket b2 = new Basket(f2, 1);
-        Basket b3 = new Basket(d1, 2);
+        ArrayList<Meal> meals = new ArrayList<>();
+        meals.add(f1);
+        meals.add(f2);
+        meals.add(f3);
+        meals.add(f4);
+        meals.add(f5);
+        meals.add(f6);
+        meals.add(d1);
+        meals.add(d2);
+        meals.add(d3);
+        meals.add(d4);
+        meals.add(d5);
+        meals.add(d6);
 
-        ArrayList<Basket> b = new ArrayList<Basket>();
-        b.add(b1);
-        b.add(b2);
-        b.add(b3);
-
-
-        Order o1 = new Order(b, 1);
-
-        System.out.println(b);
-        System.out.println("Összesen: " + o1.allOrderedProductPrice(b));
-
-        Rating r1 = new Rating(o1, "Leves", "Finom volt");
-        System.out.println(r1);
+        Order o1 = new Order();
+        o1.creatingOrder(meals, 1);
 
 
 

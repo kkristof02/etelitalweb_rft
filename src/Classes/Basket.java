@@ -20,6 +20,6 @@ public class Basket {
 
     @Override
     public String toString() {
-        return meal.toString()+"Darabszám: " + quantity + " Össz Ár: " + meal.getPrice() * quantity + "\n";
+        return meal.toString()+"Darabszám: " + quantity + " Össz Ár: " + meal.getPrice() * quantity;
     }
 }
