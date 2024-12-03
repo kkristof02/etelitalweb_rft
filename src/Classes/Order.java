@@ -20,11 +20,11 @@ public class Order {
     }
 
     public ArrayList<Basket> getBaskets() {
-        return baskets;
+        return this.baskets;
     }
 
     public int getOrder_number() {
-        return order_number;
+        return this.order_number;
     }
 
     public Order creatingOrder(ArrayList<Meal> meals, int order_number)
@@ -98,6 +98,8 @@ public class Order {
         }
             
         }
+        this.baskets = baskets;
+        this.order_number=order_number;
         Order o1 = new Order(baskets, order_number);
         Delivery d = new Delivery();
 
@@ -109,7 +111,6 @@ public class Order {
 
         for (Basket basket : baskets) {
             allprice = allprice + basket.getMeal().getPrice() * basket.getQuantity();
-
         }
         System.out.println("összesen: " + (allprice + d.getDeliveryPrice())); 
         return o1;

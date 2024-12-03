@@ -36,9 +36,12 @@ public class Main {
 
         Order o1 = new Order();
         o1.creatingOrder(meals, 1);
+        Rating r1 = new Rating();
+        ArrayList<Review> rev1 = r1.addReviewToOrder(o1);
+        for (Review revs : rev1) {
+            System.out.println(revs);            
+        }
 
-
-
-
+        
     }
 }

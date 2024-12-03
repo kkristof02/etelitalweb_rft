@@ -7,6 +7,11 @@ public class Rating {
     private Order order;
     private ArrayList<Review> reviews;
 
+    public Rating()
+    {
+
+    }
+
     public Rating(Order order)
     {
         this.order = order;
@@ -17,6 +22,7 @@ public class Rating {
         ArrayList<Review> reviews = new ArrayList<>();
         ArrayList<Basket> br = new ArrayList<>();
         br = order.getBaskets();
+        System.out.println(br);
 
         System.out.print(order.getOrder_number());
 
@@ -25,10 +31,15 @@ public class Rating {
             System.out.println("Szeretnél-e véleméynt adni? (igen/nem)");
             Scanner inChoose = new Scanner(System.in);
             String Choose = inChoose.nextLine();
-            if (Choose == "igen")
+            if (Choose.equalsIgnoreCase("igen"))
             {
-                
+                Scanner inReview = new Scanner(System.in);
+                String descString = inReview.nextLine();
+                Review rev = new Review(order.getOrder_number(), br.get(i), descString);
+                reviews.add(rev);
+
             }
+
         }
 
         
@@ -40,7 +51,12 @@ public class Rating {
 
     @Override
     public String toString() {
-        return order.getOrder_number() + "\n" + product_name + "\n" + review ;
+        String products_names = "";
+        for (Review review : reviews) {
+            products_names = review.getOrder_number().toString() + review.getProduct_name() + review.getReview()+"\n";
+
+        }
+        return order.getOrder_number() + "\n" + order.getBaskets() + "\n" + reviews;
     }
 
     

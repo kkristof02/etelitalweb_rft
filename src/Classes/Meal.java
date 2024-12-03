@@ -10,6 +10,10 @@ public class Meal {
         return price;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Termék: " + name + " Ár: " + price + " ";
