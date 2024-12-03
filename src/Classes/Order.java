@@ -35,10 +35,11 @@ public class Order {
         }
         boolean running = true;
         while (running == true) {
-            System.out.println("Válasz terméket szám alapján és aja meg a darabszámot: ");
+            System.out.println("Válasz terméket szám alapján és adja meg a darabszámot: ");
         Scanner inOrderBasket = new Scanner(System.in);
         int product = inOrderBasket.nextInt();
         int p_quantity = inOrderBasket.nextInt();
+        System.out.println("Ha nem szeretne többet irja be egy 0-át kétszer!");
         
         switch (product) {
             case 0:

@@ -1,4 +1,4 @@
-package src.Classes;
+package src.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -6,6 +6,12 @@ import static org.junit.Assert.assertNotNull;
 import java.util.ArrayList;
 
 import org.junit.Test;
+
+import src.Classes.Basket;
+import src.Classes.Drink;
+import src.Classes.Food;
+import src.Classes.Meal;
+import src.Classes.Order;
 
 public class OrderTest {
     @Test
