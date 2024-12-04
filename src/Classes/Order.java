@@ -4,14 +4,29 @@ package src.Classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * rendelés leadása 
+ */
 public class Order {
+    /**
+     * @param baskets tartalma
+     * @param order_number a rendelés száma
+     */
     private ArrayList<Basket> baskets;
     private int order_number;
+
+    /**
+     * Lértehoz egy új  üres példányt
+     */
 
     public Order()
     {
 
     }
+
+    /**
+     * Lértehoz egy új példányt kosár és a rendelés számáról
+     */
 
     public Order(ArrayList<Basket> baskets, int order_number)
     {
@@ -19,20 +34,41 @@ public class Order {
         this.order_number = order_number;
     }
 
+    /**
+     * @return visszadja a kosár tartalmát
+     */
+
     public ArrayList<Basket> getBaskets() {
         return this.baskets;
     }
+
+    /**
+     * @return visszadja a rendelés számát
+     */
 
     public int getOrder_number() {
         return this.order_number;
     }
 
+    /**
+     * a metódusban kiválaszthatjuk a rendelni kivánt termékeket és hogy mennyit szeretnék venni
+     * @param meals étel vagy ital
+     * @param order_number rendelés száma
+     * @return visszatér a rendeléssel
+     */
+
     public Order creatingOrder(ArrayList<Meal> meals, int order_number)
     {
+        /**
+         * kiirja a vásárolható termékeket
+         */
         ArrayList<Basket> baskets = new ArrayList<Basket>();
         for (int i = 0; i < meals.size(); i++) {
             System.out.println(i+1 + " " + meals.get(i));
         }
+        /**
+         * termékek kiválasztásának ciklus addig fut míg nem vagy kész a rendeléseddel
+         */
         boolean running = true;
         while (running == true) {
             System.out.println("Válasz terméket szám alapján és adja meg a darabszámot: ");
@@ -106,9 +142,17 @@ public class Order {
 
         int allprice = 0;
 
+        /**
+         * kosár kiratása
+         */
+
         for (int i = 0; i < baskets.size(); i++) {
             System.out.print(baskets.get(i)+"\n");
         }
+
+        /**
+         * rendelés összegének megadása
+         */
 
         for (Basket basket : baskets) {
             allprice = allprice + basket.getMeal().getPrice() * basket.getQuantity();

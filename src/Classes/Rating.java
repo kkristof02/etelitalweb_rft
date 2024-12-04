@@ -3,20 +3,39 @@ package src.Classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * rendelések értékelése
+ */
 public class Rating {
+    /**
+     * @param order a rendelés
+     * @param review a vélemény
+     */
     private Order order;
     private ArrayList<Review> reviews;
+
+    /**
+     * Lértehoz egy új üres példányt 
+     */
 
     public Rating()
     {
 
     }
 
+    /**
+     * Lértehoz egy új példányt a rendelésnek
+     */
     public Rating(Order order)
     {
         this.order = order;
     }
  
+    /**
+     * rendelés értékelésének metodúsa
+     * @param order rendelés amit előzöleg rendelt
+     * @return rendeléshez járó értékelés
+     */
     public ArrayList<Review> addReviewToOrder(Order order)
     {
         ArrayList<Review> reviews = new ArrayList<>();
@@ -48,6 +67,9 @@ public class Rating {
         return reviews;
     }
 
+    /**
+     * Rendselés kiíratása és mellé az értékelés
+     */
 
     @Override
     public String toString() {

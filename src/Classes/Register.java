@@ -3,14 +3,31 @@ package src.Classes;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * regisztrációs adatok felvétele
+ */
 public class Register {
+    /**
+     * @param user_data felhasználó adatai
+     * @param users felhasználó tárolása
+     */
     private User users_data;
     private ArrayList<User> users;
+
+    /**
+     * Lértehoz egy új példányt felhasználok listának 
+     */
 
     public Register(ArrayList<User> users)
     {
         this.users = users;
     }
+
+    /**
+     * Felhasználó adatok felvétele
+     * @param user_data
+     * @return visszatér a felhasználó adataival
+     */
 
     public ArrayList<User> newUserDatas(User user_data)
     {
